@@ -1,59 +1,59 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public long getSalesAmount(long[] Sales) { 
-        long SalesAmount = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            SalesAmount += Sales[i];
+    public long getSalesAmount(long[] sales) {
+        long salesAmount = 0;
+        for (int i = 0; i < sales.length; i++) {
+            salesAmount += sales[i];
         }
-        return SalesAmount;
+        return salesAmount;
     }
 
-    public long getAverageMonthSalesAmount(long[] Sales) {
-        long SalesAmount = getSalesAmount(Sales);
-        return SalesAmount / Sales.length;
+    public long getAverageMonthSalesAmount(long[] sales) {
+        long salesAmount = getSalesAmount(sales);
+        return salesAmount / sales.length;
     }
 
-    public int getMaxMonth(long[] Sales) {
-        int MaxMonth = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] >= Sales[MaxMonth]) {
-                MaxMonth = i;
+    public int getMaxMonth(long[] sales) {
+        int maxMonth = 0;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] >= sales[maxMonth]) {
+                maxMonth = i;
             }
         }
-        return MaxMonth + 1;
+        return maxMonth + 1;
     }
 
-    public int getMinMonth(long[] Sales) {
-        int MinMonth = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] <= Sales[MinMonth]) {
-                MinMonth = i;
+    public int getMinMonth(long[] sales) {
+        int minMonth = 0;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= sales[minMonth]) {
+                minMonth = i;
             }
         }
-        return MinMonth + 1;
+        return minMonth + 1;
     }
 
-    public long getQuantityMonthBelowAverage(long[] Sales) {
-        long AverageMonthSalesAmount = getAverageMonthSalesAmount(Sales);
-        int QuantityMonthBelowAverage = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] < AverageMonthSalesAmount) {
-                QuantityMonthBelowAverage++;
+    public long getQuantityMonthBelowAverage(long[] sales) {
+        long averageMonthSalesAmount = getAverageMonthSalesAmount(sales);
+        int quantityMonthBelowAverage = 0;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averageMonthSalesAmount) {
+                quantityMonthBelowAverage++;
             }
         }
-        return QuantityMonthBelowAverage;
+        return quantityMonthBelowAverage;
     }
 
-    public long getQuantityMonthAboveAverage(long[] Sales) {
-        long AverageMonthSalesAmount = getAverageMonthSalesAmount(Sales);
-        int QuantityMonthAboveAverage = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] > AverageMonthSalesAmount) {
-                QuantityMonthAboveAverage++;
+    public long getQuantityMonthAboveAverage(long[] sales) {
+        long averageMonthSalesAmount = getAverageMonthSalesAmount(sales);
+        int quantityMonthAboveAverage = 0;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averageMonthSalesAmount) {
+                quantityMonthAboveAverage++;
             }
         }
-        return QuantityMonthAboveAverage;
+        return quantityMonthAboveAverage;
     }
 }
 

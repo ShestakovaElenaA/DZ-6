@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class StatServiceTest {
     @Test
-    void TestSalesAmount() {
+    void salesAmount() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 180;
@@ -15,7 +15,7 @@ public class StatServiceTest {
     }
 
     @Test
-    void TestgetAverageMonthSalesAmount() {
+    void getAverageMonthSalesAmount() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedAverageSum = 15;
@@ -25,7 +25,7 @@ public class StatServiceTest {
     }
 
     @Test
-    void TestgetMaxMonth() {
+    void getMaxMonth() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedMaxmonth = 8;
@@ -35,7 +35,7 @@ public class StatServiceTest {
     }
 
     @Test
-    void TestgetMinMonth() {
+    void getMinMonth() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedMinmonth = 9;
@@ -45,7 +45,7 @@ public class StatServiceTest {
     }
 
     @Test
-    void TestgetQuantityMonthBelowAverage() {
+    void getQuantityMonthBelowAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedQuantityMonthBelowAverage = 5;
@@ -55,7 +55,7 @@ public class StatServiceTest {
     }
 
     @Test
-    void TestgetQuantityMonthAboveAverage() {
+    void getQuantityMonthAboveAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedQuantityMonthAboveAverage = 5;
